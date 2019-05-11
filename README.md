@@ -33,8 +33,7 @@ And add in `package.json` under the `jest` object the following:
 
 * The tests have to select elements on the DOM and then fire events or read properties of the elements to see if the components made the right thing.
   * To make the css selection more reliable it was added manually the CSS class "ibr-spfx-test-sp2019" to the higher element in the React application. Look for this css class at ItemsBrowser.tsx.
-  * For the tests to work with the `DetailsList` component it was needed to set the property `skipViewportMeasures={true}` while running the tests. Not ideal, but it was the way found...
-  * Look the tests written for the [Office UI Fabric React components](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/). They might help to figure out how to test some specific component like the [`DetailsList`](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/DetailsList/DetailsList.test.tsx) or [`TextField`](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/TextField/TextField.test.tsx), for example.
+  * Look the tests written for the [Office UI Fabric React components](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/). They might help to figure out how to test some specific component like [`TextField`](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/TextField/TextField.test.tsx) ~~or the [`DetailsList`](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/DetailsList/DetailsList.test.tsx)~~.
   * In general it is a good idea to avoid using the HTML property `id`, as pages can contain many instances of the same web part, prefer css classes instead.
 
 ## Commands for this Solution
