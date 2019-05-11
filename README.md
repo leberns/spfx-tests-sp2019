@@ -15,7 +15,7 @@ For tests with SharePoint Online see this topic [here](https://github.com/lebern
 
 * If your solution uses some of the controls from the Office UI Fabric React, like the `DetailsList` then the package **RAF** is needed, otherwise the error happens while running the tests:
 
-(`TypeError: window.requestAnimationFrame is not a function`)[https://github.com/One-com/react-truncate/issues/60]
+[`TypeError: window.requestAnimationFrame is not a function`](https://github.com/One-com/react-truncate/issues/60)
 
 How to configure RAF:
 
@@ -33,7 +33,7 @@ And add in `package.json` under the `jest` object the following:
 
 * The tests have to select elements on the DOM and then fire events or read properties of the elements to see if the components made the right thing.
   * To make the css selection more reliable it was added manually the CSS class "ibr-spfx-test-sp2019" to the higher element in the React application. Look for this css class at ItemsBrowser.tsx.
-  * Look the tests written for the [Office UI Fabric React components](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/). They might help to figure out how to test some specific component like [`TextField`](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/TextField/TextField.test.tsx) ~~or the [`DetailsList`](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/DetailsList/DetailsList.test.tsx)~~.
+  * Look the tests written for the [Office UI Fabric React components](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/). They might help to figure out how to test some specific component like [`TextField`](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/TextField/TextField.test.tsx) ~~or the [`DetailsList`](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/DetailsList/DetailsList.test.tsx)~~ (the tests here do not work for DetailsList, work in progress!).
   * In general it is a good idea to avoid using the HTML property `id`, as pages can contain many instances of the same web part, prefer css classes instead.
 
 ## Commands for this Solution
