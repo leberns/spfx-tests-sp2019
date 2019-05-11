@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "items-browser-client-side-solution",
+    "id": "f5f5be9f-93e8-4932-93c0-614a1657ba25",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/items-browser.sppkg"
+  }
+}

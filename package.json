@@ -1,0 +1,89 @@
+{
+  "name": "items-browser",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "build": "gulp bundle",
+    "clean": "gulp clean",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@microsoft/sp-core-library": "~1.4.0",
+    "@microsoft/sp-lodash-subset": "~1.4.0",
+    "@microsoft/sp-office-ui-fabric-core": "~1.4.0",
+    "@microsoft/sp-webpart-base": "~1.4.0",
+    "@types/es6-promise": "0.0.33",
+    "@types/react": "15.6.6",
+    "@types/react-dom": "15.5.6",
+    "@types/webpack-env": "1.13.1",
+    "react": "15.6.2",
+    "react-dom": "15.6.2"
+  },
+  "resolutions": {
+    "@types/react": "15.6.6"
+  },
+  "devDependencies": {
+    "@microsoft/sp-build-web": "~1.4.1",
+    "@microsoft/sp-module-interfaces": "~1.4.1",
+    "@microsoft/sp-webpart-workbench": "~1.4.1",
+    "gulp": "~3.9.1",
+    "@types/chai": "3.4.34",
+    "@types/mocha": "2.2.38",
+    "ajv": "~5.2.2",
+    "raf": "^3.4.1",
+    "@types/jest": "22.2.3",
+    "jest": "22.4.3",
+    "ts-jest": "22.4.5",
+    "identity-obj-proxy": "3.0.0",
+    "enzyme": "3.3.0",
+    "@types/enzyme": "3.1.10",
+    "enzyme-adapter-react-15": "1.0.5",
+    "react-test-renderer": "15.6.2",
+    "@types/sinon": "4.3.1",
+    "sinon": "5.0.7",
+    "jest-junit": "3.7.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "raf/polyfill"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/src/**/*.test.+(ts|tsx|js)"
+    ],
+    "mapCoverage": true,
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "cobertura"
+    ],
+    "coverageDirectory": "<rootDir>/jest",
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "testResultsProcessor": "jest-junit",
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    }
+  },
+  "jest-junit": {
+    "output": "./jest/summary-jest-junit.xml"
+  }
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="16" lines-covered="14" line-rate="0.875" branches-valid="2" branches-covered="2" branch-rate="1" timestamp="1557602777093" complexity="0" version="0.1">
+  <sources>
+    <source>C:\Dev\local\spfx-lab\spfx-tests-sp2019</source>
+  </sources>
+  <packages>
+    <package name="services" line-rate="1" branch-rate="1">
+      <classes>
+        <class name="MockItems.ts" filename="src\services\MockItems.ts" line-rate="1" branch-rate="1">
+          <methods>
+            <method name="(anonymous_0)" hits="1" signature="()V">
+              <lines>
+                <line number="3" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="3" hits="1" branch="false"/>
+            <line number="5" hits="1" branch="false"/>
+            <line number="12" hits="1" branch="false"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="webparts.itemsBrowser.components" line-rate="0.8462000000000001" branch-rate="1">
+      <classes>
+        <class name="ItemsBrowser.tsx" filename="src\webparts\itemsBrowser\components\ItemsBrowser.tsx" line-rate="0.8462000000000001" branch-rate="1">
+          <methods>
+            <method name="(anonymous_5)" hits="1" signature="()V">
+              <lines>
+                <line number="14" hits="1"/>
+              </lines>
+            </method>
+            <method name="ItemsBrowser" hits="2" signature="()V">
+              <lines>
+                <line number="33" hits="2"/>
+              </lines>
+            </method>
+            <method name="(anonymous_7)" hits="3" signature="()V">
+              <lines>
+                <line number="43" hits="3"/>
+              </lines>
+            </method>
+            <method name="(anonymous_8)" hits="1" signature="()V">
+              <lines>
+                <line number="50" hits="1"/>
+              </lines>
+            </method>
+            <method name="(anonymous_9)" hits="6" signature="()V">
+              <lines>
+                <line number="54" hits="6"/>
+              </lines>
+            </method>
+            <method name="(anonymous_10)" hits="0" signature="()V">
+              <lines>
+                <line number="61" hits="0"/>
+              </lines>
+            </method>
+            <method name="(anonymous_11)" hits="0" signature="()V">
+              <lines>
+                <line number="81" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="1" hits="1" branch="false"/>
+            <line number="2" hits="1" branch="false"/>
+            <line number="9" hits="1" branch="false"/>
+            <line number="14" hits="1" branch="false"/>
+            <line number="33" hits="2" branch="true" condition-coverage="100% (2/2)"/>
+            <line number="43" hits="3" branch="false"/>
+            <line number="44" hits="3" branch="false"/>
+            <line number="50" hits="1" branch="false"/>
+            <line number="54" hits="6" branch="false"/>
+            <line number="62" hits="0" branch="false"/>
+            <line number="81" hits="1" branch="false"/>
+            <line number="82" hits="0" branch="false"/>
+            <line number="84" hits="1" branch="false"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
