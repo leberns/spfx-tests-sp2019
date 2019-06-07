@@ -36,6 +36,23 @@ And add in `package.json` under the `jest` object the following:
   * Look the tests written for the [Office UI Fabric React components](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/). They might help to figure out how to test some specific component like [`TextField`](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/TextField/TextField.test.tsx) ~~or the [`DetailsList`](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/office-ui-fabric-react/src/components/DetailsList/DetailsList.test.tsx)~~ (the tests here do not work for DetailsList, work in progress!).
   * In general it is a good idea to avoid using the HTML property `id`, as pages can contain many instances of the same web part, prefer css classes instead.
 
+### Packages
+
+```PowerShell
+npm install --save-dev jest@22.4.3
+npm install --save-dev @types/jest@22.2.3
+npm install --save-dev ts-jest@22.4.5
+npm install --save-dev identity-obj-proxy@3.0.0
+npm install --save-dev enzyme@3.3.0
+npm install --save-dev @types/enzyme@3.1.10
+npm install --save-dev enzyme-adapter-react-15@1.0.5
+npm install --save-dev react-test-renderer@15.6.2
+npm install --save-dev @types/sinon@4.3.1
+npm install --save-dev sinon@5.0.7
+npm install --save-dev jest-junit@3.7.0
+npm install --save-dev raf@^3.4.1
+```
+
 ## Commands for this Solution
 
 Please update the paths and eventual URLs according to your system. These commands can be ran with Windows PowerShell.
@@ -63,6 +80,26 @@ gulp serve
 cd C:\Dev\GitHub\leberns\spfx-tests-sp2019
 
 npm test
+```
+
+## Other Experiments
+
+### Context API in React 15
+
+Add polyfill package:
+
+```PowerShell
+npm install --save create-react-15-context
+```
+
+### Redux
+
+```PowerShell
+npm install --save redux@^4.0.0
+npm install --save typesafe-actions@^4.0.0
+npm install --save redux-thunk@^2.2.0
+npm install --save redux-logger@^3.0.6 @types/redux-logger@^3.0.6
+npm install --save react-redux@^5.0.7 @types/react-redux@^5.0.7
 ```
 
 ## Testing Examples and Further Reading

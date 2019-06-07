@@ -10,6 +10,7 @@ import styles from './ItemsBrowser.module.scss';
 import { IItemsBrowserProps } from './IItemsBrowserProps';
 import { IItemsBrowserState } from './IItemsBrowserState';
 import { IItem } from '../../../models/IItem';
+import DataProvider from './dataProvider/DataProvider';
 
 export default class ItemsBrowser extends React.Component < IItemsBrowserProps, IItemsBrowserState > {
 
@@ -47,14 +48,17 @@ export default class ItemsBrowser extends React.Component < IItemsBrowserProps, 
           <div className={styles.row}>
             <div className={styles.column}>
               <h2 className={styles.title}>Welcome!</h2>
-              <p className={styles.subTitle}>The selected item appears below (<a className='ibr-deselect' href="#" onClick={() => { this.setState({ selectedItem: this.defaultSelection }); }}>Deselect</a>)</p>
+              <p className={styles.subTitle}>The selected item appears below (
+                 <a className='ibr-deselect' href="#" onClick={
+                  () => { this.setState({ selectedItem: this.defaultSelection }); }
+                }>Deselect</a>)</p>
               <h3>Items</h3>
                 <DetailsList
                   skipViewportMeasures={ this.props.performingTests }
                   onShouldVirtualize={() => false}
                   items={ this.props.items }
                   columns={ this.listColumns }
-                  setKey='set'
+                  setKey="set"
                   checkboxVisibility={ CheckboxVisibility.onHover }
                   selectionMode={ SelectionMode.single }
                   selectionPreservedOnEmptyClick={ true }
@@ -70,7 +74,10 @@ export default class ItemsBrowser extends React.Component < IItemsBrowserProps, 
                 <div className='ibr-selected-title'>
                   <span>title: </span>
                   <TextField value={this.state.selectedItem.title} />
-                </div>
+              </div>
+              <div>
+                <DataProvider render={data => <div>{data}</div>}></DataProvider>
+              </div>
             </div>
           </div>
         </div>

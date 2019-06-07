@@ -9,10 +9,28 @@
           "manifest": "./src/webparts/itemsBrowser/ItemsBrowserWebPart.manifest.json"
         }
       ]
+    },
+    "data-entry-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/dataEntry/DataEntryWebPart.js",
+          "manifest": "./src/webparts/dataEntry/DataEntryWebPart.manifest.json"
+        }
+      ]
+    },
+    "redux-items-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/reduxItems/ReduxItemsWebPart.js",
+          "manifest": "./src/webparts/reduxItems/ReduxItemsWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "ItemsBrowserWebPartStrings": "lib/webparts/itemsBrowser/loc/{locale}.js"
+    "ItemsBrowserWebPartStrings": "lib/webparts/itemsBrowser/loc/{locale}.js",
+    "DataEntryWebPartStrings": "lib/webparts/dataEntry/loc/{locale}.js",
+    "ReduxItemsWebPartStrings": "lib/webparts/reduxItems/loc/{locale}.js"
   }
 }

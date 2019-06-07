@@ -1,16 +1,16 @@
 {
-  "extends": "@microsoft/sp-tslint-rules/base-tslint.json",
+  "displayAsWarning": true,
   "rules": {
-    "class-name": false,
+    "class-name": true,
     "export-name": false,
-    "forin": false,
+    "forin": true,
     "label-position": false,
     "member-access": true,
-    "no-arg": false,
-    "no-console": false,
-    "no-construct": false,
+    "no-arg": true,
+    "no-console": true,
+    "no-construct": true,
     "no-duplicate-variable": true,
-    "no-eval": false,
+    "no-eval": true,
     "no-function-expression": true,
     "no-internal-module": true,
     "no-shadowed-variable": true,
@@ -20,11 +20,43 @@
     "no-use-before-declare": true,
     "no-with-statement": true,
     "semicolon": true,
-    "trailing-comma": false,
-    "typedef": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "member-variable-declaration",
+      "property-declaration"
+    ],
     "typedef-whitespace": false,
     "use-named-parameter": true,
-    "variable-name": false,
-    "whitespace": false
+    "variable-name": true,
+    "whitespace": false,
+    "max-line-length": [
+      true,
+      120
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check",
+      "allow-undefined-check"
+    ],
+    "prefer-const": true,
+    "no-trailing-whitespace": true,
+    "no-unused-variable": true,
+    "no-unreachable": true,
+    "no-var-requires": false,
+    "curly": true,
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ]
   }
 }
