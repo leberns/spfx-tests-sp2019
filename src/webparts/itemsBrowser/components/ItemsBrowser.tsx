@@ -16,12 +16,21 @@ export default class ItemsBrowser extends React.Component<IItemsBrowserProps, II
 
   private listColumns: any[] = [
     {
+      key: 'id',
+      name: 'Id',
+      fieldName: 'id',
+      width: 50,
+      minWidth: 40,
+      maxWidth: 50,
+      isResizable: true
+    },
+    {
       key: 'title',
       name: 'Title',
       fieldName: 'title',
       width: 170,
       minWidth: 100,
-      maxWidth: 170,
+      maxWidth: 120,
       isResizable: true
     }
   ];
