@@ -1,0 +1,12 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.commandsBlock {
+  .buttonDisabled {
+    span {
+      color: $ms-color-neutralLight;
+      background-color: red;
+    }
+    color: $ms-color-neutralLight;
+    background-color: red;
+  }
+}

@@ -4,12 +4,14 @@ import {
   DetailsListLayoutMode,
   CheckboxVisibility,
   SelectionMode,
-  TextField
+  TextField,
+  CommandBar
 } from 'office-ui-fabric-react';
 import styles from './ItemsBrowser.module.scss';
 import { IItemsBrowserProps } from './IItemsBrowserProps';
 import { IItemsBrowserState } from './IItemsBrowserState';
 import { IItem } from '../../../models/IItem';
+import Commands from './commands/CommandsBlock';
 
 export default class ItemsBrowser extends React.Component<IItemsBrowserProps, IItemsBrowserState> {
   private image: string = require('../../../assets/Octocat_GitHub_Mascot.png');
@@ -92,6 +94,9 @@ export default class ItemsBrowser extends React.Component<IItemsBrowserProps, II
               <div className="ibr-selected-title">
                 <span>title: </span>
                 <TextField value={this.state.selectedItem.title} />
+              </div>
+              <div>
+                <Commands />
               </div>
               <div>
                 <div>Image:</div>
